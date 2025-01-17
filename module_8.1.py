@@ -12,7 +12,7 @@
 def add_everything_up(a, b):
     resault = 0
     try:
-        resault = round((a + b), 3)
+        resault = (a + b)
         return resault
     except TypeError:
         if type(a) == int or type(a) == float and type(b) == str:  # a - число, b - строка
@@ -27,3 +27,5 @@ print(add_everything_up(123.456, "строка"))
 print(add_everything_up("яблоко", 4215))
 
 print(add_everything_up(123.456, 7))
+
+print(add_everything_up("яблоко", "строка"))
