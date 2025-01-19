@@ -38,7 +38,7 @@ def calculate_average(numbers):
         print(f'В коллекции отсутствуют данные для вычислений')
         average = 0
     except TypeError:
-        print(f'В аргумент numbers записан некорректный тип данных "{numbers}" - {type(numbers).__name__}'
+        print(f'В numbers записан некорректный тип данных "{numbers}" - {type(numbers).__name__}'
               f' (не является коллекцией)')
         average = None
     finally:
