@@ -25,15 +25,15 @@ def personal_sum(numbers):
         except TypeError:
             incorrect_data += 1  # несоответствие типов данных
             print(f'Присутствует некорректный тип данных для подсчёта суммы - "{number}" - {type(number).__name__}')
-    return (result, incorrect_data)
+    return result, incorrect_data
 
 
 def calculate_average(numbers):
     average = 0  # результат выполнения функции
     try:
         numbers_size = len(numbers)  # Коллекция позволяет определить размер
-        sum_numbers, incorrect_count = personal_sum(numbers)  # функция возвращает кортеж из двух значений
-        average = sum_numbers / (numbers_size - incorrect_count)  # Вычислим среднее арифметическое всех ЧИСЕЛ
+        result, incorrect_data = personal_sum(numbers)  # функция personal_sum возвращает кортеж из двух значений
+        average = result / (numbers_size - incorrect_data)  # Вычислим среднее арифметическое всех чисел
     except ZeroDivisionError:
         print(f'В коллекции отсутствуют данные для вычислений')
         average = 0
